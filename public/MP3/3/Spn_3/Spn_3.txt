@@ -1,0 +1,469 @@
+Yo estoy feliz
+Tú eres alto
+Él es amable
+Ella corre rápido
+Nosotros comemos ahora
+Ellos duermen bien
+Es grande
+Yo estaba triste
+Tú caminaste a casa
+Él jugó fútbol
+Ella bailó ayer
+Nosotros cantaremos
+Ellos estuvieron aquí
+Llueve hoy
+Yo amo libros
+Tú lees despacio
+Él escribe cartas
+Ella pinta paredes
+Nosotros vemos películas
+Ellos nadan diario
+Estaba frío
+Yo iré
+Tú viste estrellas
+Él encontró llaves
+Ella compró flores
+Nosotros estamos cansados
+Ellos corren rápido
+Parece fácil
+Yo me divierto
+Tú bebes agua
+Él cocina cena
+Ella limpia cuartos
+Nosotros jugamos juegos
+Ellos estudian mucho
+Se siente bien
+Yo trabajé tarde
+Tú reíste fuerte
+Él saltó alto
+Ella se cayó
+Nosotros esperamos mucho
+Ellos hablaron mucho
+Se veía bonito
+Yo puedo nadar
+Tú deberías descansar
+Él podría venir
+Ella podría bailar
+Nosotros queremos comida
+Ellos necesitan ayuda
+Suena genial
+Yo comí desayuno
+Tú bebiste café
+Él escribió notas
+Ella leyó historias
+Nosotros vimos televisión
+Ellos cantaron canciones
+Fue divertido
+Yo intentaré
+Tú estás tarde
+Él parece ocupado
+Ella se ve bonita
+Nosotros sentimos frío
+Ellos caminan lejos
+Es soleado
+Yo almorcé
+Tú viste pájaros
+Él atrapó peces
+Ella dibujó imágenes
+Nosotros hicimos galletas
+Ellos construyeron casas
+Huele bien
+Yo estoy leyendo
+Tú estás escribiendo
+Él está corriendo
+Ella está bailando
+Nosotros estamos jugando
+Ellos están estudiando
+Está lloviendo
+Yo estaba caminando
+Tú estabas hablando
+Él estaba cocinando
+Ella estaba pintando
+Nosotros estábamos cantando
+Ellos estaban nadando
+Estaba nevando
+Yo bailaré
+Tú leerás
+Él escribirá
+Ella pintará
+Nosotros jugaremos
+Ellos estudiarán
+Lloverá
+Yo he comido
+Tú has dormido
+Él ha trabajado
+Ella ha bailado
+Nosotros hemos cantado
+Ellos han jugado
+Ha parado
+Yo había ido
+Tú habías visto
+Él había encontrado
+Ella había comprado
+Nosotros habíamos esperado
+Ellos habían hablado
+Había nevado
+Yo puedo leer
+Tú puedes escribir
+Él puede correr
+Ella puede bailar
+Nosotros podemos cantar
+Ellos pueden nadar
+Puede volar
+Yo estoy yendo
+Tú estás viniendo
+Él está saliendo
+Ella está quedándose
+Nosotros estamos comiendo
+Ellos están bebiendo
+Está creciendo
+Yo estaba feliz
+Tú estabas triste
+Él estaba amable
+Ella estaba alta
+Nosotros estábamos cansados
+Ellos estaban ocupados
+Era grande
+Yo seré
+Tú verás
+Él encontrará
+Ella comprará
+Nosotros esperaremos
+Ellos hablarán
+Nevará
+Yo he estado
+Tú has ido
+Él ha visto
+Ella ha encontrado
+Nosotros hemos esperado
+Ellos han hablado
+Ha llovido
+Yo había estado
+Tú habías ido
+Él había visto
+Ella había encontrado
+Nosotros habíamos esperado
+Ellos habían hablado
+Había nevado
+Yo estoy cantando
+Tú estás bailando
+Él está pintando
+Ella está cocinando
+Nosotros estamos leyendo
+Ellos están escribiendo
+Está brillando
+Yo estaba corriendo
+Tú estabas nadando
+Él estaba jugando
+Ella estaba estudiando
+Nosotros estábamos caminando
+Ellos estaban hablando
+Estaba lloviendo
+Yo cantaré
+Tú bailarás
+Él pintará
+Ella cocinará
+Nosotros leeremos
+Ellos escribirán
+Brillará
+Yo he cantado
+Tú has bailado
+Él ha pintado
+Ella ha cocinado
+Nosotros hemos leído
+Ellos han escrito
+Ha brillado
+Yo había cantado
+Tú habías bailado
+Él había pintado
+Ella había cocinado
+Nosotros habíamos leído
+Ellos habían escrito
+Había llovido
+Yo estoy trabajando
+Tú estás descansando
+Él está ayudando
+Ella está aprendiendo
+Nosotros estamos intentando
+Ellos están construyendo
+Está moviéndose
+Yo estaba comiendo
+Tú estabas bebiendo
+Él estaba leyendo
+Ella estaba escribiendo
+Nosotros estábamos jugando
+Ellos estaban cantando
+Estaba nevando
+Yo comeré
+Tú beberás
+Él leerá
+Ella escribirá
+Nosotros jugaremos
+Ellos cantarán
+Nevará
+Yo he comido
+Tú has bebido
+Él ha leído
+Ella ha escrito
+Nosotros hemos jugado
+Ellos han cantado
+Ha nevado
+Yo había comido
+Tú habías bebido
+Él había leído
+Ella había escrito
+Nosotros habíamos jugado
+Ellos habían cantado
+Había nevado
+Yo estoy esperando
+Tú estás hablando
+Él está caminando
+Ella está corriendo
+Nosotros estamos bailando
+Ellos están pintando
+Está cayendo
+Yo estaba cantando
+Tú estabas bailando
+Él estaba pintando
+Ella estaba cocinando
+Nosotros estábamos leyendo
+Ellos estaban escribiendo
+Estaba brillando
+Yo esperaré
+Tú hablarás
+Él caminará
+Ella correrá
+Nosotros bailaremos
+Ellos pintarán
+Caerá
+Yo he esperado
+Tú has hablado
+Él ha caminado
+Ella ha corrido
+Nosotros hemos bailado
+Ellos han pintado
+Ha caído
+Yo había esperado
+Tú habías hablado
+Él había caminado
+Ella había corrido
+Nosotros habíamos bailado
+Ellos habían pintado
+Había caído
+Yo estoy estudiando
+Tú estás aprendiendo
+Él está enseñando
+Ella está ayudando
+Nosotros estamos trabajando
+Ellos están descansando
+Está creciendo
+Yo estaba esperando
+Tú estabas hablando
+Él estaba caminando
+Ella estaba corriendo
+Nosotros estábamos bailando
+Ellos estaban pintando
+Estaba cayendo
+Yo estudiaré
+Tú aprenderás
+Él enseñará
+Ella ayudará
+Nosotros trabajaremos
+Ellos descansarán
+Crecerá
+Yo he estudiado
+Tú has aprendido
+Él ha enseñado
+Ella ha ayudado
+Nosotros hemos trabajado
+Ellos han descansado
+Ha crecido
+Yo había estudiado
+Tú habías aprendido
+Él había enseñado
+Ella había ayudado
+Nosotros habíamos trabajado
+Ellos habían descansado
+Había crecido
+Yo estoy jugando
+Tú estás cantando
+Él está bailando
+Ella está pintando
+Nosotros estamos cocinando
+Ellos están leyendo
+Está lloviendo
+Yo estaba estudiando
+Tú estabas aprendiendo
+Él estaba enseñando
+Ella estaba ayudando
+Nosotros estábamos trabajando
+Ellos estaban descansando
+Estaba creciendo
+Yo jugaré
+Tú cantarás
+Él bailará
+Ella pintará
+Nosotros cocinaremos
+Ellos leerán
+Lloverá
+Yo he jugado
+Tú has cantado
+Él ha bailado
+Ella ha pintado
+Nosotros hemos cocinado
+Ellos han leído
+Ha llovido
+Yo había jugado
+Tú habías cantado
+Él había bailado
+Ella había pintado
+Nosotros habíamos cocinado
+Ellos habían leído
+Había llovido
+Yo estoy caminando
+Tú estás corriendo
+Él está nadando
+Ella está cantando
+Nosotros estamos bailando
+Ellos están pintando
+Está brillando
+Yo estaba jugando
+Tú estabas cantando
+Él estaba bailando
+Ella estaba pintando
+Nosotros estábamos cocinando
+Ellos estaban leyendo
+Estaba lloviendo
+Yo caminaré
+Tú correrás
+Él nadará
+Ella cantará
+Nosotros bailaremos
+Ellos pintarán
+Brillará
+Yo he caminado
+Tú has corrido
+Él ha nadado
+Ella ha cantado
+Nosotros hemos bailado
+Ellos han pintado
+Ha brillado
+Yo había caminado
+Tú habías corrido
+Él había nadado
+Ella había cantado
+Nosotros habíamos bailado
+Ellos habían pintado
+Había brillado
+Yo estoy leyendo
+Tú estás escribiendo
+Él está cocinando
+Ella está bailando
+Nosotros estamos cantando
+Ellos están jugando
+Está nevando
+Yo estaba caminando
+Tú estabas corriendo
+Él estaba nadando
+Ella estaba cantando
+Nosotros estábamos bailando
+Ellos estaban pintando
+Estaba brillando
+Yo leeré
+Tú escribirás
+Él cocinará
+Ella bailará
+Nosotros cantaremos
+Ellos jugarán
+Nevará
+Yo he leído
+Tú has escrito
+Él ha cocinado
+Ella ha bailado
+Nosotros hemos cantado
+Ellos han jugado
+Ha nevado
+Yo había leído
+Tú habías escrito
+Él había cocinado
+Ella había bailado
+Nosotros habíamos cantado
+Ellos habían jugado
+Había nevado
+Yo estoy hablando
+Tú estás esperando
+Él está ayudando
+Ella está aprendiendo
+Nosotros estamos trabajando
+Ellos están descansando
+Está creciendo
+Yo estaba leyendo
+Tú estabas escribiendo
+Él estaba cocinando
+Ella estaba bailando
+Nosotros estábamos cantando
+Ellos estaban jugando
+Estaba nevando
+Yo hablaré
+Tú esperarás
+Él ayudará
+Ella aprenderá
+Nosotros trabajaremos
+Ellos descansarán
+Crecerá
+Yo he hablado
+Tú has esperado
+Él ha ayudado
+Ella ha aprendido
+Nosotros hemos trabajado
+Ellos han descansado
+Ha crecido
+Yo había hablado
+Tú habías esperado
+Él había ayudado
+Ella había aprendido
+Nosotros habíamos trabajado
+Ellos habían descansado
+Había crecido
+Yo estoy bailando
+Tú estás cantando
+Él está pintando
+Ella está cocinando
+Nosotros estamos leyendo
+Ellos están escribiendo
+Está lloviendo
+Yo estaba hablando
+Tú estabas esperando
+Él estaba ayudando
+Ella estaba aprendiendo
+Nosotros estábamos trabajando
+Ellos estaban descansando
+Estaba creciendo
+Yo bailaré
+Tú cantarás
+Él pintará
+Ella cocinará
+Nosotros leeremos
+Ellos escribirán
+Lloverá
+Yo he bailado
+Tú has cantado
+Él ha pintado
+Ella ha cocinado
+Nosotros hemos leído
+Ellos han escrito
+Ha llovido
+Yo había bailado
+Tú habías cantado
+Él había pintado
+Ella había cocinado
+Nosotros habíamos leído
+Ellos habían escrito
+Había llovido
+Yo estoy corriendo
+Tú estás caminando
+Él está nadando
+Ella está cantando
+Nosotros estamos bailando
+Ellos están pintando
+Está brillando
