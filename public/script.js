@@ -130,10 +130,25 @@ button2.addEventListener('click', async () => {
     await buttonTranslateAction();
 });
 
-button3.addEventListener('click', () => {
+
+button3.addEventListener('click', async () => {
+    if (checkBox1.checked || checkBox1.checked) {
+	checkBox1.checked = false;
+	checkBox2.checked = false;
+    } else {
+	checkBox1.checked = true;
+	checkBox2.checked = true;
+    } 	
     if (timerNext) clearTimeout(timerNext);
     if (timerTranslate) clearTimeout(timerTranslate);
+    if (checkBox1.checked) await buttonNextAction();	
 });
+
+
+//button3.addEventListener('click', () => {
+//    if (timerNext) clearTimeout(timerNext);
+//    if (timerTranslate) clearTimeout(timerTranslate);
+//});
 
 // Core functions (async to handle audio waits)
 async function buttonNextAction() {
