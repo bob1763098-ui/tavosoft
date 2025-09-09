@@ -114,6 +114,7 @@ async function loadSentences() {
     // Initial setup (as in original)
     sakEng = sakEng_15_20;
     sakSpn = sakSpn_15_20;
+    await buttonNextAction(); // Trigger button1 action after sentences are loaded
 }
 loadSentences();
 
