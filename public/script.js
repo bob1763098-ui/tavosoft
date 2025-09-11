@@ -1,6 +1,3 @@
-// script.js (Frontend JavaScript)
-
-// Sakiniai class for handling sentences
 class Sakiniai {
     constructor() {
         this.sak = [];
@@ -29,7 +26,6 @@ class Sakiniai {
     }
 }
 
-// Mp3Player class for handling audio playback
 class Mp3Player {
     async play(strFilePath) {
         return new Promise((resolve) => {
@@ -38,7 +34,7 @@ class Mp3Player {
                 audio.addEventListener('ended', () => resolve());
                 audio.addEventListener('error', (err) => {
                     console.error("Error playing MP3 file: " + err.message);
-                    resolve(); // Continue even on error
+                    resolve();
                 });
                 audio.play();
             } catch (e) {
@@ -49,25 +45,27 @@ class Mp3Player {
     }
 }
 
-// Main application logic
-let sakEng, sakSpn, sakEng_15_20, sakSpn_15_20,
-    sakEng_3, sakSpn_3, sakEng_5_8, sakSpn_5_8, sakEng_8_12, sakSpn_8_12;
+let sakEng, sakSpn, sakEng_1, sakSpn_1, sakEng_2, sakSpn_2,
+    sakEng_3, sakSpn_3, sakEng_5_8, sakSpn_5_8, sakEng_8_12, sakSpn_8_12,
+    sakEng_15_20, sakSpn_15_20;
 let pathEngMp3 = "", pathSpnMp3 = "",
+    pathEngMp3_1 = "/mp3/1/Eng_1/", pathSpnMp3_1 = "/mp3/1/Spn_1/",
+    pathEngMp3_2 = "/mp3/2/Eng_2/", pathSpnMp3_2 = "/mp3/2/Spn_2/",
     pathEngMp3_3 = "/mp3/3/Eng_3/", pathSpnMp3_3 = "/mp3/3/Spn_3/",
     pathEngMp3_5_8 = "/mp3/5_8/Eng_5_8/", pathSpnMp3_5_8 = "/mp3/5_8/Spn_5_8/",
     pathEngMp3_8_12 = "/mp3/8_12/Eng_8_12/", pathSpnMp3_8_12 = "/mp3/8_12/Spn_8_12/",
     pathEngMp3_15_20 = "/mp3/15_20/Eng_15_20/", pathSpnMp3_15_20 = "/mp3/15_20/Spn_15_20/";
 let randomInt;
-const Delay = 80; // delay milliseconds for each symbol in sentence
+const Delay = 80;
 let timerNext = null;
 let timerTranslate = null;
 const player = new Mp3Player();
 let iChecked = 0;
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-// DOM elements
 const textArea1 = document.getElementById('textArea1');
 const textArea2 = document.getElementById('textArea2');
 const button1 = document.getElementById('button1');
@@ -89,8 +87,11 @@ const checkBox9 = document.getElementById('checkBox9');
 const checkBox10 = document.getElementById('checkBox10');
 const checkBox11 = document.getElementById('checkBox11');
 
-// Load sentences asynchronously
 async function loadSentences() {
+    sakEng_1 = new Sakiniai();
+    sakSpn_1 = new Sakiniai();
+    sakEng_2 = new Sakiniai();
+    sakSpn_2 = new Sakiniai();
     sakEng_3 = new Sakiniai();
     sakSpn_3 = new Sakiniai();
     sakEng_5_8 = new Sakiniai();
@@ -101,6 +102,10 @@ async function loadSentences() {
     sakSpn_15_20 = new Sakiniai();
 
     await Promise.all([
+        sakEng_1.readSentencesFromFile(pathEngMp3_1 + "Eng_1.txt"),
+        sakSpn_1.readSentencesFromFile(pathSpnMp3_1 + "Spn_1.txt"),
+        sakEng_2.readSentencesFromFile(pathEngMp3_2 + "Eng_2.txt"),
+        sakSpn_2.readSentencesFromFile(pathSpnMp3_2 + "Spn_2.txt"),
         sakEng_3.readSentencesFromFile(pathEngMp3_3 + "Eng_3.txt"),
         sakSpn_3.readSentencesFromFile(pathSpnMp3_3 + "Spn_3.txt"),
         sakEng_5_8.readSentencesFromFile(pathEngMp3_5_8 + "Eng_5_8.txt"),
@@ -111,14 +116,13 @@ async function loadSentences() {
         sakSpn_15_20.readSentencesFromFile(pathSpnMp3_15_20 + "Spn_15_20.txt")
     ]);
 
-    // Initial setup (as in original)
     sakEng = sakEng_15_20;
     sakSpn = sakSpn_15_20;
-    await buttonNextAction(); // Trigger button1 action after sentences are loaded
+    await buttonNextAction();
 }
+
 loadSentences();
 
-// Event listeners
 button1.addEventListener('click', async () => {
     if (timerNext) clearTimeout(timerNext);
     if (timerTranslate) clearTimeout(timerTranslate);
@@ -131,27 +135,19 @@ button2.addEventListener('click', async () => {
     await buttonTranslateAction();
 });
 
-
 button3.addEventListener('click', async () => {
-    if (checkBox1.checked || checkBox1.checked) {
-	checkBox1.checked = false;
-	checkBox2.checked = false;
+    if (checkBox1.checked || checkBox2.checked) {
+        checkBox1.checked = false;
+        checkBox2.checked = false;
     } else {
-	checkBox1.checked = true;
-	checkBox2.checked = true;
-    } 	
+        checkBox1.checked = true;
+        checkBox2.checked = true;
+    }
     if (timerNext) clearTimeout(timerNext);
     if (timerTranslate) clearTimeout(timerTranslate);
-    if (checkBox1.checked) await buttonNextAction();	
+    if (checkBox1.checked) await buttonNextAction();
 });
 
-
-//button3.addEventListener('click', () => {
-//    if (timerNext) clearTimeout(timerNext);
-//    if (timerTranslate) clearTimeout(timerTranslate);
-//});
-
-// Core functions (async to handle audio waits)
 async function buttonNextAction() {
     getNext();
     textArea1.innerText = sakEng.sak[randomInt];
@@ -190,14 +186,15 @@ function doTranslateAfterDelay() {
         delay += 2000;
     }
     if (!checkBox7.checked) {
-        // If not speaking aloud, add estimated speak time
+        let minDelay = 1000;
+        let minDelayAdd = 600;
         let estSpeak = Delay * engLength;
+        if (estSpeak < minDelay) estSpeak += minDelayAdd;
         if (checkBox9.checked) {
             estSpeak += Delay * engLength + slider3.value;
         }
         delay += estSpeak;
     }
-    // Since speak is awaited if enabled, this timeout is after speak or immediate estimate
     timerTranslate = setTimeout(async () => await buttonTranslateAction(), delay);
 }
 
@@ -206,8 +203,10 @@ function doNextAfterDelay() {
     let extraPause = slider2.value * spnLength;
     let delay = extraPause;
     if (!checkBox8.checked) {
-        // If not translating aloud, add estimated translate time
+        let minDelay = 1000;
+        let minDelayAdd = 600;
         let estTranslate = Delay * spnLength;
+        if (estTranslate < minDelay) estTranslate += minDelayAdd;
         if (checkBox10.checked) {
             estTranslate += Delay * spnLength + slider4.value;
         }
@@ -223,6 +222,18 @@ function getNext() {
     pathSpnMp3 = pathSpnMp3_3;
     getNextChecked();
     switch (iChecked) {
+        case 5:
+            sakEng = sakEng_1;
+            sakSpn = sakSpn_1;
+            pathEngMp3 = pathEngMp3_1;
+            pathSpnMp3 = pathSpnMp3_1;
+            break;
+        case 6:
+            sakEng = sakEng_2;
+            sakSpn = sakSpn_2;
+            pathEngMp3 = pathEngMp3_2;
+            pathSpnMp3 = pathSpnMp3_2;
+            break;
         case 1:
             sakEng = sakEng_3;
             sakSpn = sakSpn_3;
@@ -251,6 +262,12 @@ function getNext() {
             iChecked = 0;
             break;
     }
+    if (sakEng.sak.length === 0) {
+        console.error("No sentences loaded for category " + iChecked);
+        textArea1.innerText = "No sentences loaded for this category. Check assets files.";
+        textArea2.innerText = "";
+        return;
+    }
     randomInt = getRandomInt(sakEng.sak.length);
     pathEngMp3 += `E${randomInt + 1}.mp3`;
     pathSpnMp3 += `S${randomInt + 1}.mp3`;
@@ -270,21 +287,67 @@ function getNextChecked() {
         else if (checkBox4.checked) iChecked = 2;
         else if (checkBox5.checked) iChecked = 3;
         else if (checkBox6.checked) iChecked = 4;
+        else if (checkBox12.checked) iChecked = 5;
+        else if (checkBox14.checked) iChecked = 6;
     } else if (iChecked === 1) {
         if (checkBox4.checked) iChecked = 2;
         else if (checkBox5.checked) iChecked = 3;
         else if (checkBox6.checked) iChecked = 4;
+        else if (checkBox12.checked) iChecked = 5;
+        else if (checkBox14.checked) iChecked = 6;
+        else if (checkBox3.checked) iChecked = 1;
     } else if (iChecked === 2) {
         if (checkBox5.checked) iChecked = 3;
         else if (checkBox6.checked) iChecked = 4;
-        else if (checkBox3.checked) iChecked = 1;
-    } else if (iChecked === 3) {
-        if (checkBox6.checked) iChecked = 4;
+        else if (checkBox12.checked) iChecked = 5;
+        else if (checkBox14.checked) iChecked = 6;
         else if (checkBox3.checked) iChecked = 1;
         else if (checkBox4.checked) iChecked = 2;
+    } else if (iChecked === 3) {
+        if (checkBox6.checked) iChecked = 4;
+        else if (checkBox12.checked) iChecked = 5;
+        else if (checkBox14.checked) iChecked = 6;
+        else if (checkBox3.checked) iChecked = 1;
+        else if (checkBox4.checked) iChecked = 2;
+        else if (checkBox5.checked) iChecked = 3;
     } else if (iChecked === 4) {
+        if (checkBox12.checked) iChecked = 5;
+        else if (checkBox14.checked) iChecked = 6;
+        else if (checkBox3.checked) iChecked = 1;
+        else if (checkBox4.checked) iChecked = 2;
+        else if (checkBox5.checked) iChecked = 3;
+        else if (checkBox6.checked) iChecked = 4;
+    } else if (iChecked === 5) {
+        if (checkBox14.checked) iChecked = 6;
+        else if (checkBox3.checked) iChecked = 1;
+        else if (checkBox4.checked) iChecked = 2;
+        else if (checkBox5.checked) iChecked = 3;
+        else if (checkBox6.checked) iChecked = 4;
+        else if (checkBox12.checked) iChecked = 5;
+    } else if (iChecked === 6) {
         if (checkBox3.checked) iChecked = 1;
         else if (checkBox4.checked) iChecked = 2;
         else if (checkBox5.checked) iChecked = 3;
+        else if (checkBox6.checked) iChecked = 4;
+        else if (checkBox12.checked) iChecked = 5;
+        else if (checkBox14.checked) iChecked = 6;
+    }
+    console.log("Selected category: " + iChecked);
+    let attempts = 0;
+    while (attempts < 7 && sakEng.sak.length === 0) {
+        iChecked = (iChecked % 6) + 1;
+        switch (iChecked) {
+            case 1: sakEng = sakEng_1; break;
+            case 2: sakEng = sakEng_2; break;
+            case 3: sakEng = sakEng_3; break;
+            case 4: sakEng = sakEng_5_8; break;
+            case 5: sakEng = sakEng_8_12; break;
+            case 6: sakEng = sakEng_15_20; break;
+        }
+        attempts++;
+    }
+    if (sakEng.sak.length === 0) {
+        iChecked = 0;
+        console.error("No non-empty categories found!");
     }
 }
